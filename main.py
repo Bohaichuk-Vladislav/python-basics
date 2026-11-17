@@ -1,13 +1,11 @@
 # Програма "Розумний кошик" — розрахунок вартості покупки зі знижками
 
 # Константи програми
-DISCOUNT_LIMIT: float = 1700.0
-DISCOUNT_RATE: float = 0.10
-VIP_DISCOUNT_RATE: float = 0.05
-MAX_PRODUCTS: int = 20
+DISCOUNT_LIMIT: float = 1000.0
+DISCOUNT_RATE: float = 0.15
+VIP_DISCOUNT_RATE: float = 0.10
+MAX_PRODUCTS: int = 25
 CURRENCY: str = "грн"
-
-
 def get_float(prompt: str) -> float:
     """Отримує додатне число від користувача."""
     while True:
