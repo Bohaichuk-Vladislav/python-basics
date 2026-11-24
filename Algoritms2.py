@@ -56,3 +56,70 @@ if number >= 1 and number <= 100:
     print("Число входить у діапазон")
 else:
     print("Число поза діапазоном")
+#5 завдання
+a = int(input("Перше число: "))
+b = int(input("Друге число: "))
+
+maximum = a if a > b else b
+
+print("Більше число:", maximum)
+number = int(input("Введіть число: "))
+
+result = "Парне" if number % 2 == 0 else "Непарне"
+
+print(result)
+#6 завдання
+season = input("Введіть номер пори року: ")
+
+match season:
+    case "1":
+        print("Зима")
+    case "2":
+        print("Весна")
+    case "3":
+        print("Літо")
+    case "4":
+        print("Осінь")
+    case _:
+        print("Невідомий номер")
+    day = input("Введіть день тижня: ").lower()
+
+match day:
+    case "субота" | "неділя":
+        print("Вихідний день")
+    case "понеділок" | "вівторок" | "середа" | "четвер" | "п'ятниця":
+        print("Робочий день")
+    case _:
+        print("Невідомий день")
+#7 завдання
+point = (5, 5)
+
+match point:
+    case (0, 0):
+        print("Початок координат")
+    case (0, y):
+        print(f"Точка на осі Y: {y}")
+    case (x, 0):
+        print(f"Точка на осі X: {x}")
+    case (x, y) if x == y:
+        print("Точка на діагоналі")
+    case (x, y):
+        print(f"Координати: {x}, {y}")
+a = float(input("Перше число: "))
+b = float(input("Друге число: "))
+operation = input("Операція (+, -, *, /): ")
+
+match operation:
+    case "+":
+        print("Результат:", a + b)
+    case "-":
+        print("Результат:", a - b)
+    case "*":
+        print("Результат:", a * b)
+    case "/":
+        if b != 0:
+            print("Результат:", a / b)
+        else:
+            print("На нуль ділити не можна")
+    case _:
+        print("Невідома операція")
