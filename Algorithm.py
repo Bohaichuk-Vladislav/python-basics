@@ -19,3 +19,17 @@ print(f"До сплати: {final_price: .2f} грн")
 a=int(input("Перше число: "))
 b=int(input("Друге число"))
 print(a+b)
+number = int(input("Число: "))
+is_even = number % 2 == 0
+in_range = 10 <= number <= 100
+valid = is_even and in_range
+print(f"Допустиме число: {valid}")
+balance = float(input("Баланс: "))
+amount = float(input("Сума: "))
+blocked = input("Заблоковано (так/ні): ") == "так"
+fee = amount * 0.02
+total = amount + fee
+allowed = amount > 0 and balance >= total and not blocked
+print(f"З комісією: {total:.2f}")
+print(f"Платіж дозволено: {allowed}")
+
